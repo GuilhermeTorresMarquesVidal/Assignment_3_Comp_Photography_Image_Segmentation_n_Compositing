@@ -10,11 +10,13 @@ limit_down = 0
 keys_III = [
     'background', 
     'GT04_alpha', 
-    'GT04']
+    'GT04', 
+    'selfie']
 
 # list of images filepath
 
 list_of_files_III = [
     'Images/background.png', 
     'Images/GT04_alpha.png', 
-    'Images/GT04.png']
+    'Images/GT04.png', 
+    'Images/selfie.jpg']
