@@ -6,7 +6,7 @@ from .params import sigma, zoom_in, zoom_out
 def generate(image, dep_max, layer):
 
     if(layer == dep_max):
-        return [image], []
+        return [image], [image]
 
     # Blur process
 
@@ -32,16 +32,16 @@ def generate(image, dep_max, layer):
 
     image_zoom_out = np.zeros_like(image)
 
-    image_zoom_out[:,:,0] = zoom(gauss_seq[-1][:,:,0], zoom_out)
-    image_zoom_out[:,:,1] = zoom(gauss_seq[-1][:,:,1], zoom_out)
-    image_zoom_out[:,:,2] = zoom(gauss_seq[-1][:,:,2], zoom_out)
+    image_zoom_out[:,:,0] = zoom(gauss_seq[0][:,:,0], zoom_out)
+    image_zoom_out[:,:,1] = zoom(gauss_seq[0][:,:,1], zoom_out)
+    image_zoom_out[:,:,2] = zoom(gauss_seq[0][:,:,2], zoom_out)
 
     image_diff = image - image_zoom_out
 
     # insert image and diference in the image
 
-    gauss_seq.append(image)
-    laplace_seq.append(image_diff)
+    gauss_seq.insert(0, image)
+    laplace_seq.insert(0, image_diff)
 
     return gauss_seq, laplace_seq
 
