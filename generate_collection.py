@@ -1,6 +1,6 @@
 import numpy as np
 
-from Contents.laplacian_pyramid import generate_pyramid
+from Contents.pyramid import generate_pyramid
 from Contents.blended import blended_pipeline
 
 def pyramid_collection(images, masks_images, dep_max_list):

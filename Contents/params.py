@@ -25,7 +25,11 @@ keys_III = [
     'background', 
     'GT04_alpha', 
     'GT04', 
-    'selfie'
+    'selfie',
+    'rua',
+    'mosteiro',
+    'tundra',
+    'lake'
 ]
 
 # list of images filepath
@@ -39,5 +43,9 @@ list_of_files_III = [
     'Images/background.png', 
     'Images/GT04_alpha.png', 
     'Images/GT04.png', 
-    'Images/selfie.jpg'
+    'Images/selfie.png',
+    'Images/rua.png',
+    'Images/mosteiro.png',
+    'Images/tundra.png',
+    'Images/lake.png'
 ]
